@@ -4,6 +4,28 @@ function qs(name) {
   return new URLSearchParams(window.location.search).get(name);
 }
 
+/* ---------- Shuffle helpers ---------- */
+
+function shuffleArray(arr) {
+  const copy = arr.slice();
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function shuffleQuestions(questions) {
+  return shuffleArray(questions).map(q => {
+    const order = shuffleArray(q.options.map((_, i) => i));
+    return {
+      ...q,
+      options: order.map(i => q.options[i]),
+      answer: order.indexOf(q.answer)
+    };
+  });
+}
+
 /* ---------- Sound effects (Web Audio, no files needed) ---------- */
 
 let audioCtx = null;
@@ -177,7 +199,7 @@ async function runQuiz(rootId) {
   titleEl.textContent = `Chapter ${chapterId}: ${chapterData.title}`;
   document.title = `${chapterData.title} – Class 3 Olympiad Quiz`;
 
-  const questions = chapterData.questions;
+  const questions = shuffleQuestions(chapterData.questions);
   const total = questions.length;
   const userAnswers = new Array(total).fill(null);
   let current = 0;
