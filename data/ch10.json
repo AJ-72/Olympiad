@@ -1,0 +1,35 @@
+{
+  "title": "Life Skills",
+  "questions": [
+    { "text": "We must behave well in the classroom. Which of the following is NOT a good etiquette in the school?",
+      "options": [
+        {"image":"images/ch10_q1_a.jpg","label":"Teacher teaching attentive students in class"},
+        {"image":"images/ch10_q1_b.jpg","label":"Students jumping on desks and benches"},
+        {"image":"images/ch10_q1_c.jpg","label":"Students running and pushing on the stairs"},
+        {"text":"Both (B) and (C)"}
+      ], "answer": 3 },
+    { "text": "Which safety measure one can follow in the home?",
+      "options": [{"text":"Do not lean over a balcony railing"},{"text":"Always walk on the footpath"},{"text":"Cross the road at zebra crossing"},{"text":"Follow the traffic rules"}], "answer": 0 },
+    { "text": "We should ______ waste food and water.",
+      "options": [{"text":"Always"},{"text":"Sometimes"},{"text":"Never"},{"text":"None of these"}], "answer": 2 },
+    { "text": "Kindness is an act of ______.",
+      "options": [{"text":"Hurting others"},{"text":"Being caring for others"},{"text":"Abusing others"},{"text":"Teasing others"}], "answer": 1 },
+    { "text": "Sangeeta got less marks in the test. She should",
+      "options": [{"text":"Study hard to get good marks in the next test"},{"text":"Play more"},{"text":"Blame her parents"},{"text":"Be angry at the teacher."}], "answer": 0 },
+    { "text": "Which of the following is a healthy/good habit?",
+      "options": [{"text":"Radhika takes lift, instead of the stairs, to reach her apartment on first floor."},{"text":"Neha everyday reads one short story from her story book."},{"text":"Geeta always includes fast food in her diet."},{"text":"Ishaani takes pizza everyday."}], "answer": 1 },
+    { "text": "Your mother is busy with her household chores and you hear your home's doorbell. What will you do in this situation?",
+      "options": [{"text":"You should tell your mother to open the door."},{"text":"You should open the door."},{"text":"You should shout at your mother to open the door."},{"text":"You should go to your room and start watching television."}], "answer": 1 },
+    { "text": "Which of the following is the first thing that you should do after returning from school?",
+      "options": [
+        {"image":"images/ch10_q8_a.jpg","label":"Sleeping on the bed"},
+        {"image":"images/ch10_q8_b.jpg","label":"Watching television"},
+        {"image":"images/ch10_q8_c.jpg","label":"Playing cricket"},
+        {"image":"images/ch10_q8_d.jpg","label":"Washing hands"}
+      ], "answer": 3 },
+    { "text": "If your class teacher makes you monitor of the class, what will you do/feel?",
+      "options": [{"text":"You will boast about this to your friends."},{"text":"You will ask your teacher that you do not want to be a monitor as it is a tedious job."},{"text":"You will ask your classmates to bring different dishes for you daily since you are a monitor."},{"text":"You will feel more responsible and try to do your duty with honesty."}], "answer": 3 },
+    { "text": "You took part in the SOF International General Knowledge Olympiad test and got the first rank. You must be ______ after seeing score in the Olympiad.",
+      "options": [{"text":"Happy"},{"text":"Sad"},{"text":"Angry"},{"text":"Disappointed"}], "answer": 0 }
+  ]
+}
