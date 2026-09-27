@@ -1,0 +1,71 @@
+{
+  "title": "Current Affairs and Developments",
+  "questions": [
+    { "text": "Who is the current Minister of Home Affairs of India?",
+      "options": [
+        {"image":"images/ch11_q1_a.jpg","label":"S. Jaishankar"},
+        {"image":"images/ch11_q1_b.jpg","label":"Rajnath Singh"},
+        {"image":"images/ch11_q1_c.jpg","label":"Amit Shah"},
+        {"text":"None of these"}
+      ], "answer": 2 },
+    { "text": "Which of the following country hosted the FIDE Chess World Cup 2025?",
+      "options": [{"text":"Australia"},{"text":"France"},{"text":"India"},{"text":"Canada"}], "answer": 2 },
+    { "text": "Who among the following received the Padma Vibhushan Award 2025 in Public Affairs?",
+      "options": [
+        {"image":"images/ch11_q3_a.jpg","label":"Dr. Bindeshwar Pathak"},
+        {"image":"images/ch11_q3_b.jpg","label":"Sushil Kumar Modi"},
+        {"image":"images/ch11_q3_c.jpg","label":"Manohar Joshi"},
+        {"image":"images/ch11_q3_d.jpg","label":"Justice (Retd.) Jagdish S. Khehar"}
+      ], "answer": 3 },
+    { "text": "The latest ₹ 200 denomination banknote has the motif of ______ on the reverse.",
+      "options": [{"text":"Hampi"},{"text":"Sanchi Stupa"},{"text":"Rani Ki Vav"},{"text":"Ellora Caves"}], "answer": 1 },
+    { "text": "Which of the following cities was the venue of 2025 IBA Women's World Boxing Championship?",
+      "options": [{"text":"Beijing, China"},{"text":"Niš, Serbia"},{"text":"Budapest, Hungary"},{"text":"New Delhi, India"}], "answer": 1 },
+    { "text": "Which two teams played the finals of ICC Men's Champions Trophy 2025?",
+      "options": [{"text":"India and Australia"},{"text":"South Africa and Australia"},{"text":"India and New Zealand"},{"text":"New Zealand and South Africa"}], "answer": 2 },
+    { "text": "Which of the following city hosted the Australian Open 2024?",
+      "options": [{"text":"Sydney"},{"text":"Brisbane"},{"text":"Melbourne"},{"text":"Perth"}], "answer": 2 },
+    { "text": "How many Padma Bhushan awards were given in 2025?",
+      "options": [{"text":"17"},{"text":"19"},{"text":"14"},{"text":"18"}], "answer": 1 },
+    { "text": "Who among the following is the Chief Minister of Andhra Pradesh?",
+      "options": [
+        {"image":"images/ch11_q9_a.jpg","label":"Hemant Soren"},
+        {"image":"images/ch11_q9_b.jpg","label":"N. Chandrababu Naidu"},
+        {"image":"images/ch11_q9_c.jpg","label":"Himanta Biswa Sarma"},
+        {"text":"None of these"}
+      ], "answer": 1 },
+    { "text": "The National Youth Day is celebrated on which date in India?",
+      "options": [{"text":"8th November"},{"text":"7th November"},{"text":"12th January"},{"text":"25th December"}], "answer": 2 },
+    { "text": "11th November is celebrated every year as National Education Day in India as a mark of respect and to commemorate the birth anniversary of a famous freedom fighter who was also the first Education Minister of independent India. Identify him/her.",
+      "options": [{"text":"Dr. Sarvepalli Radhakrishnan"},{"text":"Maulana Abul Kalam Azad"},{"text":"Sardar Vallabhbhai Patel"},{"text":"Sarojini Naidu"}], "answer": 1 },
+    { "text": "World Cancer Day is observed every year on ______.",
+      "options": [{"text":"4th February"},{"text":"22nd March"},{"text":"4th January"},{"text":"5th September"}], "answer": 0 },
+    { "text": "Who among the following is the current Prime Minister of Japan?",
+      "options": [{"text":"Shigeru Ishiba"},{"text":"Sanae Takaichi"},{"text":"Fumio Kishida"},{"text":"None of these"}], "answer": 1 },
+    { "text": "What was the theme of International Day of Yoga for 2025?",
+      "options": [{"text":"Yoga for Self and Society"},{"text":"Yoga for One Earth, One Health"},{"text":"Yoga for Humanity"},{"text":"Yoga for Wellness"}], "answer": 1 },
+    { "text": "Who among the following won the Women's Singles title at French Open 2025?",
+      "options": [
+        {"image":"images/ch11_q15_a.jpg","label":"Iga Swiatek"},
+        {"image":"images/ch11_q15_b.jpg","label":"Madison Keys"},
+        {"image":"images/ch11_q15_c.jpg","label":"Aryna Sabalenka"},
+        {"image":"images/ch11_q15_d.jpg","label":"Coco Gauff"}
+      ], "answer": 3 },
+    { "text": "What was the theme for World Earth Day 2025?",
+      "options": [{"text":"Restore Our Earth"},{"text":"Invest In Our Planet"},{"text":"Planet vs. Plastics"},{"text":"Our Power, Our Planet"}], "answer": 3 },
+    { "text": "Who is the current Chief Minister of Jharkhand?",
+      "options": [{"text":"M.K. Stalin"},{"text":"Bhajan Lal Sharma"},{"text":"Hemant Soren"},{"text":"None of these"}], "answer": 2 },
+    { "text": "Who is the captain of India Women's National Cricket team?",
+      "options": [
+        {"image":"images/ch11_q18_a.jpg","label":"Harmanpreet Kaur"},
+        {"image":"images/ch11_q18_b.jpg","label":"Smriti Mandhana"},
+        {"image":"images/ch11_q18_c.jpg","label":"Harleen Deol"},
+        {"text":"None of these"}
+      ], "answer": 0 },
+    { "text": "Yudh Abhyas is a joint military exercise held between India and ______.",
+      "options": [{"text":"Japan"},{"text":"USA"},{"text":"Malaysia"},{"text":"Nepal"}], "answer": 1 },
+    { "text": "The person shown in the given picture is",
+      "image": "images/ch11_q20_person.jpg",
+      "options": [{"text":"President of Sri Lanka"},{"text":"President of Bangladesh"},{"text":"President of Nepal"},{"text":"None of these"}], "answer": 0 }
+  ]
+}

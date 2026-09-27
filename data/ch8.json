@@ -1,0 +1,96 @@
+{
+  "title": "Sports",
+  "questions": [
+    { "text": "With which of the following games the given player shown in picture is associated?",
+      "image": "images/ch8_q1_lakshyasen.jpg",
+      "options": [{"text":"Football"},{"text":"Badminton"},{"text":"Hockey"},{"text":"Cricket"}], "answer": 1 },
+    { "text": "With which of the following sports is the term 'back pass' associated?",
+      "options": [
+        {"image":"images/ch8_q2_a.jpg","label":"Baseball"},
+        {"image":"images/ch8_q2_b.jpg","label":"Chess"},
+        {"image":"images/ch8_q2_c.jpg","label":"Ice hockey"},
+        {"image":"images/ch8_q2_d.jpg","label":"Football"}
+      ], "answer": 3 },
+    { "text": "AIFF is the national governing body of football in India. What is the full form of AIFF?",
+      "options": [{"text":"All India Football Federation"},{"text":"All India Football Foundation"},{"text":"Asian India Football Foundation"},{"text":"Association of Indian Football Federation"}], "answer": 0 },
+    { "text": "Which among the following awards is given to recognise outstanding achievement in National sports?",
+      "options": [{"text":"Padma Shri"},{"text":"Param Vir Chakra"},{"text":"Ashok Chakra"},{"text":"Arjuna Award"}], "answer": 3 },
+    { "text": "In which of the following sports a player is awarded the title of 'Man of the Match'?",
+      "options": [
+        {"image":"images/ch8_q5_a.jpg","label":"Chess"},
+        {"image":"images/ch8_q5_b.jpg","label":"Cricket"},
+        {"image":"images/ch8_q5_c.jpg","label":"Billiards"},
+        {"image":"images/ch8_q5_d.jpg","label":"Cycling"}
+      ], "answer": 1 },
+    { "text": "Complete the given analogy.\nChess : Indoor game : : ______ : Outdoor game",
+      "options": [{"text":"Squash"},{"text":"Polo"},{"text":"Carrom"},{"text":"Billiards"}], "answer": 1 },
+    { "text": "In the given picture, what is the cricket umpire signalling?",
+      "image": "images/ch8_q7_umpire.jpg",
+      "options": [{"text":"Dead Ball"},{"text":"No ball"},{"text":"Leg Bye"},{"text":"Cancel Call"}], "answer": 3 },
+    { "text": "Which track and field event is played by the equipment shown in the given picture?",
+      "image": "images/ch8_q8_javelin.jpg",
+      "options": [{"text":"Discus throw"},{"text":"Shot put"},{"text":"Hammer throw"},{"text":"Javelin throw"}], "answer": 3 },
+    { "text": "Who was the captain of the winning team, the Mumbai Indians, of the 2019 Indian Premier League tournament?",
+      "options": [
+        {"image":"images/ch8_q9_a.jpg","label":"Hardik Pandya"},
+        {"image":"images/ch8_q9_b.jpg","label":"MS Dhoni"},
+        {"image":"images/ch8_q9_c.jpg","label":"Virat Kohli"},
+        {"image":"images/ch8_q9_d.jpg","label":"Rohit Sharma"}
+      ], "answer": 3 },
+    { "text": "Who was the Australian batsman who still holds the record of 99.94 runs for the highest individual test batting average in test matches?",
+      "options": [{"text":"Donald Bradman"},{"text":"Steve Waugh"},{"text":"Adam Gilchrist"},{"text":"David Boon"}], "answer": 0 },
+    { "text": "She is an Assamese sprinter, who achieved the national record for 400 meters by running in 51.46 seconds, at the World U-20 Championships in 2018. She is the first Indian female athlete to win a gold medal at the IAAF World U20 Championships in a track event. Who is she?",
+      "image": "images/ch8_q11_himadas.jpg",
+      "options": [{"text":"Hima Das"},{"text":"PV Sindhu"},{"text":"Dutee Chand"},{"text":"Sakshi Malik"}], "answer": 0 },
+    { "text": "Who among the following is the first Indian to win a medal in weightlifting at the Olympics?",
+      "options": [
+        {"image":"images/ch8_q12_a.jpg","label":"Santoshi Matsa"},
+        {"image":"images/ch8_q12_b.jpg","label":"Karnam Malleswari"},
+        {"image":"images/ch8_q12_c.jpg","label":"Kunjarani Devi"},
+        {"image":"images/ch8_q12_d.jpg","label":"Mirabai Chanu"}
+      ], "answer": 1 },
+    { "text": "Pullela Gopichand has represented India in three Thomas Cup tournaments. With which one of the following sports is he associated?",
+      "options": [{"text":"Badminton"},{"text":"Squash"},{"text":"Hockey"},{"text":"Cricket"}], "answer": 0 },
+    { "text": "Who are the participants in Paralympic Games?",
+      "image": "images/ch8_q14_paralympic.jpg",
+      "options": [{"text":"Only female athletes with disabilities"},{"text":"Only male athletes with disabilities"},{"text":"Male and female athletes with a range of disabilities"},{"text":"None of these"}], "answer": 2 },
+    { "text": "The most serious risk of consuming high fat diet is heart disease. Which of the following food items has high fat content in it?",
+      "options": [
+        {"image":"images/ch8_q15_a.jpg","label":"Apple"},
+        {"image":"images/ch8_q15_b.jpg","label":"Samosa"},
+        {"image":"images/ch8_q15_c.jpg","label":"Glass of milk"},
+        {"image":"images/ch8_q15_d.jpg","label":"Carrot"}
+      ], "answer": 1 },
+    { "text": "Identify the yogasana shown in the picture.",
+      "image": "images/ch8_q16_yoga.jpg",
+      "options": [{"text":"Garudasana"},{"text":"Uttanasana"},{"text":"Tadasana"},{"text":"Trikonasana"}], "answer": 3 },
+    { "text": "Olympic Games were held in ancient Greece in the honour of which Greek God?",
+      "options": [{"text":"Apollo"},{"text":"Jupiter"},{"text":"Zeus"},{"text":"Uranus"}], "answer": 2 },
+    { "text": "In which of the following Olympic sports is the wearing of a beard NOT allowed?",
+      "options": [
+        {"image":"images/ch8_q18_a.jpg","label":"Swimming"},
+        {"image":"images/ch8_q18_b.jpg","label":"Football"},
+        {"image":"images/ch8_q18_c.jpg","label":"Badminton"},
+        {"image":"images/ch8_q18_d.jpg","label":"Boxing"}
+      ], "answer": 3 },
+    { "text": "What was the slogan of 2024 Summer Olympics?",
+      "options": [{"text":"Faster, Higher Stronger-Together"},{"text":"Games Wide Open"},{"text":"United By Emotion"},{"text":"One World, One Dream"}], "answer": 1 },
+    { "text": "Who among the following became the first Indian women cricketer to complete 10,000 runs in international cricket?",
+      "options": [
+        {"image":"images/ch8_q20_a.jpg","label":"Mithali Raj"},
+        {"image":"images/ch8_q20_b.jpg","label":"Harleen Deol"},
+        {"image":"images/ch8_q20_c.jpg","label":"Smriti Mandhana"},
+        {"image":"images/ch8_q20_d.jpg","label":"Harmanpreet Kaur"}
+      ], "answer": 0 },
+    { "text": "Match the columns and select the correct option.\nColumn 1 (Player): P. Manu Bhaker, Q. Michael Phelps, R. Thiago Almada, S. Neeraj Chopra\nColumn 2 (Sport): 1. Swimming, 2. Shooting, 3. Javelin throw, 4. Football",
+      "options": [{"text":"P-2, Q-1, R-4, S-3"},{"text":"P-3, Q-2, R-4, S-1"},{"text":"P-2, Q-1, R-3, S-4"},{"text":"P-3, Q-1, R-4, S-2"}], "answer": 0 },
+    { "text": "Select the option that correctly fills the given blanks.\nIn Paris Olympics, India bagged ______ medals in total, out of which ______ was/were silver medal(s) and ______ was/were bronze medal(s).",
+      "options": [{"text":"5, 1, 4"},{"text":"6, 1, 5"},{"text":"6, 5, 1"},{"text":"5, 4, 1"}], "answer": 1 },
+    { "text": "Select the INCORRECT statement.",
+      "options": [{"text":"Australia has won Cricket World Cup for the maximum number of times."},{"text":"Brazil has won the Football World Cup for the maximum number of times."},{"text":"England has hosted Commonwealth Games for the maximum number of times."},{"text":"United States has hosted Olympic Games for the maximum number of times."}], "answer": 2 },
+    { "text": "A few terms related to sports are listed in the given box.\nBirdie, Bogey, Eagle, Bunt, Tackle\nHow many of them are related to golf?",
+      "options": [{"text":"3"},{"text":"5"},{"text":"4"},{"text":"2"}], "answer": 0 },
+    { "text": "Identify W, X, Y and Z from the given information.\nW: He is a famous Indian professional tennis player.\nX: He is a famous Spanish professional footballer.\nY: He is a famous Australian International cricketer.\nZ: He is a famous Indian professional player of English billiards and snooker.",
+      "options": [{"text":"W: Abhimanyu Puranik, X: Aaron Finch, Y: Ignazio Abate, Z: Geet Sethi"},{"text":"W: Leander Paes, X: Andrés Iniesta, Y: Tim Paine, Z: Pankaj Advani"},{"text":"W: Debashis Das, X: Eoin Morgan, Y: Amauri, Z: Gaurav Ghei"},{"text":"W: Vishnu Prasanna, X: Trevor Bayliss, Y: Milos Raonic, Z: Arjun Atwal"}], "answer": 1 }
+  ]
+}
