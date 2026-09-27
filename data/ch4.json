@@ -1,0 +1,82 @@
+{
+  "title": "Science and Technology",
+  "questions": [
+    { "text": "Stars appear to move from ______ in the sky.",
+      "options": [{"text":"West to East"},{"text":"East to West"},{"text":"North to South"},{"text":"South to North"}], "answer": 1 },
+    { "text": "'Cassiopeia' is the name of a ______.",
+      "options": [{"text":"Constellation"},{"text":"Galaxy"},{"text":"Planet"},{"text":"Comet"}], "answer": 0 },
+    { "text": "Who among the following was the first woman to travel in space?",
+      "options": [
+        {"image":"images/ch4_q3_a.jpg","label":"Valentina Tereshkova"},
+        {"image":"images/ch4_q3_b.jpg","label":"Sunita Williams"},
+        {"image":"images/ch4_q3_c.jpg","label":"Svetlana Savitskaya"},
+        {"image":"images/ch4_q3_d.jpg","label":"Sally Ride"}
+      ], "answer": 0 },
+    { "text": "Heat energy stored inside the Earth is known as ______.",
+      "options": [{"text":"Kinetic energy"},{"text":"Solar energy"},{"text":"Light energy"},{"text":"Geothermal energy"}], "answer": 3 },
+    { "text": "Which of the following materials has lustre?",
+      "options": [{"text":"Wood"},{"text":"Rubber"},{"text":"Plastic"},{"text":"Copper"}], "answer": 3 },
+    { "text": "The front of the ship is called",
+      "image": "images/ch4_q6_ship.jpg",
+      "options": [{"text":"Port"},{"text":"Deck"},{"text":"Bow"},{"text":"Stern"}], "answer": 2 },
+    { "text": "Which device is used to measure the level of humidity present in the air?",
+      "options": [{"text":"Barometer"},{"text":"Thermometer"},{"text":"Hygrometer"},{"text":"Anemometer"}], "answer": 2 },
+    { "text": "Renewable energy comes from sources or processes that are constantly replenished. Which of the following is NOT a renewable source of energy?",
+      "options": [{"text":"Wind power"},{"text":"Biomass energy"},{"text":"Solar power"},{"text":"Petroleum"}], "answer": 3 },
+    { "text": "Read the given statements regarding application X. It provides detailed information about geographical region. In addition to conventional road maps, it offers aerial and satellite views. Select the option that correctly identifies the logo of application X.",
+      "options": [
+        {"image":"images/ch4_q9_a.jpg"},
+        {"image":"images/ch4_q9_b.jpg"},
+        {"image":"images/ch4_q9_c.jpg"},
+        {"image":"images/ch4_q9_d.jpg"}
+      ], "answer": 3 },
+    { "text": "Which of the following social networking/media sites has/have origin in USA?",
+      "options": [
+        {"image":"images/ch4_q10_a.jpg","label":"X"},
+        {"image":"images/ch4_q10_b.jpg","label":"YouTube"},
+        {"image":"images/ch4_q10_c.jpg","label":"Snapchat"},
+        {"text":"All of these"}
+      ], "answer": 3 },
+    { "text": "Asteroids are small, rocky, irregularly shaped objects that orbit the Sun. The majority of known asteroids orbit within the Asteroid Belt. It is present between which of the following planets?",
+      "options": [{"text":"Mars and Jupiter"},{"text":"Earth and Mars"},{"text":"Venus and Earth"},{"text":"Saturn and Uranus"}], "answer": 0 },
+    { "text": "What is the full form of GPS?",
+      "options": [{"text":"Geo Packet Security"},{"text":"Global Picture System"},{"text":"General Packet Service"},{"text":"Global Positioning System"}], "answer": 3 },
+    { "text": "Which of the following device's speed is measured in pages per minute (ppm)?",
+      "options": [
+        {"image":"images/ch4_q13_a.jpg","label":"Mouse"},
+        {"image":"images/ch4_q13_b.jpg","label":"Printer"},
+        {"image":"images/ch4_q13_c.jpg","label":"Microphone"},
+        {"image":"images/ch4_q13_d.jpg","label":"Speakers"}
+      ], "answer": 1 },
+    { "text": "______ is the hardest natural material found on Earth.",
+      "options": [{"text":"Plastic"},{"text":"Diamond"},{"text":"Wood"},{"text":"Marble"}], "answer": 1 },
+    { "text": "Which of the following materials conducts electricity?",
+      "options": [{"text":"Plastic"},{"text":"Silver"},{"text":"Wood"},{"text":"All of these"}], "answer": 1 },
+    { "text": "Which of the following statements is INCORRECT about ISRO?",
+      "options": [{"text":"It was established in August 1971."},{"text":"Its headquarters is in Bengaluru."},{"text":"Dr. Vikram Sarabhai was the first chairman of it."},{"text":"Aryabhata was its first launched satellite."}], "answer": 0 },
+    { "text": "Which of the following materials get attracted towards a magnet?",
+      "options": [{"text":"Glass jar"},{"text":"Iron screw"},{"text":"Paper sheet"},{"text":"Plastic pen"}], "answer": 1 },
+    { "text": "What type of energy is stored in the battery?",
+      "options": [{"text":"Chemical energy"},{"text":"Kinetic energy"},{"text":"Gravitational energy"},{"text":"Elastic energy"}], "answer": 0 },
+    { "text": "Which of the following materials can be used to make heat proof handles of cooking utensils?",
+      "options": [{"text":"Bakelite"},{"text":"Wood"},{"text":"Copper"},{"text":"Both (A) and (B)"}], "answer": 3 },
+    { "text": "Which planet has the shortest day in our Solar System?",
+      "options": [{"text":"Neptune"},{"text":"Mercury"},{"text":"Jupiter"},{"text":"Venus"}], "answer": 2 },
+    { "text": "Material X is hard, waterproof and transparent while material Y is light, waterproof, strong and durable. X and Y could be ______ and ______ respectively.",
+      "options": [{"text":"Metal, glass"},{"text":"Rubber, paper"},{"text":"Glass, plastic"},{"text":"Metal, paper"}], "answer": 2 },
+    { "text": "It is an event when the Sun, the Earth and the Moon align with each other as shown in the diagram. What is it called?",
+      "image": "images/ch4_q22_eclipse.jpg",
+      "options": [{"text":"New Moon"},{"text":"Solar Eclipse"},{"text":"Half Moon"},{"text":"Lunar Eclipse"}], "answer": 3 },
+    { "text": "Match the columns and select the correct option. P: Red planet, Q: Smallest planet, R: Hottest planet, S: Largest inner planet. (1: Mercury, 2: Venus, 3: Earth, 4: Mars)",
+      "options": [{"text":"P-4, Q-1, R-2, S-3"},{"text":"P-2, Q-3, R-1, S-4"},{"text":"P-4, Q-3, R-2, S-1"},{"text":"P-2, Q-1, R-3, S-4"}], "answer": 0 },
+    { "text": "Which of the following is NOT a part of \"Meta Platforms\"?",
+      "options": [
+        {"image":"images/ch4_q24_a.jpg","label":"Instagram"},
+        {"image":"images/ch4_q24_b.jpg","label":"Threads"},
+        {"image":"images/ch4_q24_c.jpg","label":"Messenger"},
+        {"image":"images/ch4_q24_d.jpg","label":"X"}
+      ], "answer": 3 },
+    { "text": "Select the correct statement.",
+      "options": [{"text":"Iron does not allow heat to pass through it."},{"text":"Clinical thermometer which is used to measure our body temperature contains mercury."},{"text":"Butter paper is transparent."},{"text":"Plastic is a good conductor of electricity."}], "answer": 1 }
+  ]
+}

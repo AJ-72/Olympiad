@@ -1,0 +1,9 @@
+{
+  "chapters": [
+    { "id": 1, "title": "Me and My Surroundings", "file": "ch1.json" },
+    { "id": 2, "title": "Plants and Animals", "file": "ch2.json" },
+    { "id": 3, "title": "India and the World", "file": "ch3.json" },
+    { "id": 4, "title": "Science and Technology", "file": "ch4.json" },
+    { "id": 5, "title": "Language and Literature", "file": "ch5.json" }
+  ]
+}
