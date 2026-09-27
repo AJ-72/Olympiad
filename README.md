@@ -1,12 +1,15 @@
 # Olympiad
 
-Olympiad book questions as a web quiz, published with GitHub Pages.
+A quiz portal for the Class 3 Olympiad workbook, published with GitHub Pages.
 
-- **Quiz page** (`index.html`): children pick a chapter and answer; each answer is marked at once.
-- **Add chapter page** (`admin.html`): select book photos, the browser reads them with
-  Tesseract.js, you correct the questions and choose answers, then save to GitHub.
-- **Data** (`data/questions.json`): the only place questions live. Saving from the add
-  chapter page commits this file; the site republishes in about a minute.
+- **Home page** (`index.html`): lists the 5 chapters.
+- **Quiz page** (`quiz.html?chapter=N`): shows one question at a time. Each answer
+  is checked right away, and a full review with the correct answers is shown at
+  the end.
+- **Data** (`data/ch1.json` &hellip; `data/ch5.json`): the 25 questions per chapter,
+  taken from the book and its answer key. `data/chapters.json` lists the chapters.
+- **Images** (`images/`): pictures used by questions that show a photo or a
+  diagram (birds, organs, flags, app logos, etc.), cropped from the workbook.
 
 ## One-time setup
 
@@ -14,15 +17,9 @@ Olympiad book questions as a web quiz, published with GitHub Pages.
 2. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
 3. Merge to `main`. The workflow `.github/workflows/pages.yml` publishes the site to
    `https://aj-72.github.io/Olympiad/`.
-4. Make a fine-grained token (GitHub → Settings → Developer settings → Personal access tokens →
-   Fine-grained): repository access **only AJ-72/Olympiad**, permission **Contents: Read and write**.
-   Paste it in "GitHub settings" on the add chapter page. It stays in that browser only.
 
-## Other tools
+## Changing a question
 
-- `node build.js` checks `data/questions.json` and writes `google-form.gs`
-  (Apps Script: one Google Form per chapter; run `createForms()` at https://script.google.com).
-- `tools/ocr_questions.py` is the command-line OCR version (Python + Tesseract).
-
-Photo tips: take each page flat, from above, in good light, at full camera resolution.
-Crop the answer photo to one chapter. OCR cannot read picture options; type those in.
+Edit the matching `data/chN.json` file and open a pull request. Each question has
+a `text`, an `options` array (each option has either `text` or an `image` path),
+and an `answer` index (0 = A, 1 = B, 2 = C, 3 = D).
