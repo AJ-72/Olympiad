@@ -25,7 +25,7 @@ jobs:
       - name: Collect site files
         run: |
           mkdir _site
-          cp -r index.html quiz.html css js data images _site/
+          cp -r index.html quiz.html characters.html css js data images _site/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
