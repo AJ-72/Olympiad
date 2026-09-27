@@ -154,18 +154,28 @@ async function loadChapterList(rootId) {
     const res = await fetch('data/chapters.json');
     const data = await res.json();
     root.innerHTML = '';
-    data.chapters.forEach(ch => {
+    const cards = data.chapters.map(ch => {
       const card = document.createElement('div');
       card.className = 'chapter-card';
       card.innerHTML = `
         <div class="chapter-info">
           <h2>Chapter ${ch.id}: ${escapeHtml(ch.title)}</h2>
-          <p>25 questions</p>
+          <p class="chapter-question-count">&nbsp;</p>
         </div>
         <a class="btn" href="quiz.html?chapter=${ch.id}">Start Quiz</a>
       `;
       root.appendChild(card);
+      return card;
     });
+    await Promise.all(data.chapters.map(async (ch, i) => {
+      try {
+        const chRes = await fetch(`data/${ch.file}`);
+        const chData = await chRes.json();
+        cards[i].querySelector('.chapter-question-count').textContent = `${chData.questions.length} questions`;
+      } catch (err) {
+        console.error(err);
+      }
+    }));
   } catch (err) {
     root.innerHTML = '<p class="loading">Could not load chapters. Please refresh the page.</p>';
     console.error(err);
