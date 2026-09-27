@@ -4,6 +4,128 @@ function qs(name) {
   return new URLSearchParams(window.location.search).get(name);
 }
 
+/* ---------- Sound effects (Web Audio, no files needed) ---------- */
+
+let audioCtx = null;
+function getAudioCtx() {
+  if (!audioCtx) {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    audioCtx = new AC();
+  }
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  return audioCtx;
+}
+
+function playTone(freq, startTime, duration, type = 'sine', gainPeak = 0.2) {
+  const ctx = getAudioCtx();
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.type = type;
+  osc.frequency.value = freq;
+  gain.gain.setValueAtTime(0.0001, startTime);
+  gain.gain.exponentialRampToValueAtTime(gainPeak, startTime + 0.03);
+  gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+  osc.connect(gain);
+  gain.connect(ctx.destination);
+  osc.start(startTime);
+  osc.stop(startTime + duration + 0.05);
+}
+
+function playCorrectSound() {
+  try {
+    const ctx = getAudioCtx();
+    const now = ctx.currentTime;
+    [523.25, 659.25, 783.99].forEach((f, i) => playTone(f, now + i * 0.09, 0.18));
+  } catch (err) { /* audio not available */ }
+}
+
+function playWrongSound() {
+  try {
+    const ctx = getAudioCtx();
+    const now = ctx.currentTime;
+    playTone(220, now, 0.25, 'sawtooth', 0.12);
+    playTone(160, now + 0.12, 0.25, 'sawtooth', 0.12);
+  } catch (err) { /* audio not available */ }
+}
+
+function playStreakSound() {
+  try {
+    const ctx = getAudioCtx();
+    const now = ctx.currentTime;
+    [523.25, 659.25, 783.99, 1046.5].forEach((f, i) => playTone(f, now + i * 0.08, 0.2, 'triangle', 0.18));
+  } catch (err) { /* audio not available */ }
+}
+
+function playFinishSound() {
+  try {
+    const ctx = getAudioCtx();
+    const now = ctx.currentTime;
+    [523.25, 587.33, 659.25, 783.99, 1046.5].forEach((f, i) => playTone(f, now + i * 0.12, 0.3, 'triangle', 0.2));
+  } catch (err) { /* audio not available */ }
+}
+
+/* ---------- Character rewards ---------- */
+
+const STREAK_CHARACTERS = ['🦁', '🐸', '🐵', '🦉', '🐢', '🐬', '🦋', '🐧', '🐨', '🦄', '🐯', '🐰', '🦊', '🐼', '🐝'];
+const FINISH_CHARACTERS = ['🏆', '🥇', '🌟', '👑', '💎', '🚀', '🎖️', '🌈'];
+const CHARACTERS_KEY = 'olympiad_characters';
+
+function loadCollection() {
+  try {
+    return JSON.parse(localStorage.getItem(CHARACTERS_KEY)) || [];
+  } catch (err) {
+    return [];
+  }
+}
+
+function saveCollection(collection) {
+  try {
+    localStorage.setItem(CHARACTERS_KEY, JSON.stringify(collection));
+  } catch (err) { /* storage not available */ }
+}
+
+function awardCharacter(emoji, reason) {
+  const collection = loadCollection();
+  collection.push({ emoji, reason, date: new Date().toISOString() });
+  saveCollection(collection);
+  return collection;
+}
+
+function randomFrom(list) {
+  return list[Math.floor(Math.random() * list.length)];
+}
+
+function showCharacterPopup(emoji, message) {
+  const popup = document.createElement('div');
+  popup.className = 'character-popup';
+  popup.innerHTML = `
+    <div class="character-popup-emoji">${emoji}</div>
+    <div class="character-popup-text">${escapeHtml(message)}</div>
+  `;
+  document.body.appendChild(popup);
+  setTimeout(() => popup.classList.add('character-popup-hide'), 1800);
+  setTimeout(() => popup.remove(), 2400);
+}
+
+async function loadCharacterAlbum(rootId) {
+  const root = document.getElementById(rootId);
+  const collection = loadCollection();
+  if (collection.length === 0) {
+    root.innerHTML = '<p class="loading">No characters yet. Play a quiz and answer 3 in a row correctly to win one!</p>';
+    return;
+  }
+  let html = `<p class="album-count">You have collected ${collection.length} character${collection.length === 1 ? '' : 's'}!</p>`;
+  html += '<div class="character-grid">';
+  collection.slice().reverse().forEach(item => {
+    html += `<div class="character-tile">
+      <div class="character-tile-emoji">${item.emoji}</div>
+      <div class="character-tile-reason">${escapeHtml(item.reason)}</div>
+    </div>`;
+  });
+  html += '</div>';
+  root.innerHTML = html;
+}
+
 async function loadChapterList(rootId) {
   const root = document.getElementById(rootId);
   try {
@@ -59,6 +181,7 @@ async function runQuiz(rootId) {
   const total = questions.length;
   const userAnswers = new Array(total).fill(null);
   let current = 0;
+  let streak = 0;
 
   const progressFill = document.getElementById('progressFill');
   const progressText = document.getElementById('progressText');
@@ -131,6 +254,22 @@ async function runQuiz(rootId) {
       ${isCorrect ? '✓ Correct!' : '✗ Not quite. The correct answer is ' + letterFor(q.answer) + '.'}
     </div>`;
 
+    if (isCorrect) {
+      streak++;
+      playCorrectSound();
+      if (streak > 0 && streak % 3 === 0) {
+        const emoji = randomFrom(STREAK_CHARACTERS);
+        awardCharacter(emoji, `${streak} in a row in Chapter ${chapterId}`);
+        setTimeout(() => {
+          playStreakSound();
+          showCharacterPopup(emoji, `${streak} in a row! You won a new character!`);
+        }, 300);
+      }
+    } else {
+      streak = 0;
+      playWrongSound();
+    }
+
     const actions = card.querySelector('.actions');
     const isLast = qIndex === total - 1;
     const nextBtn = document.createElement('button');
@@ -152,10 +291,19 @@ async function runQuiz(rootId) {
     let score = 0;
     questions.forEach((q, i) => { if (userAnswers[i] === q.answer) score++; });
 
+    playFinishSound();
+    const finishEmoji = randomFrom(FINISH_CHARACTERS);
+    awardCharacter(finishEmoji, `Finished Chapter ${chapterId} with ${score}/${total}`);
+
     let html = `<div class="score-banner">
       <div class="score-big">${score} / ${total}</div>
       <p>You got ${score} out of ${total} questions correct.</p>
+      <div class="finish-character">
+        <div class="finish-character-emoji">${finishEmoji}</div>
+        <p>You won a bonus character for finishing this chapter!</p>
+      </div>
       <a class="btn secondary" href="index.html">Back to chapters</a>
+      <a class="btn secondary" href="characters.html" style="margin-left:0.5rem;">My characters</a>
       <button class="btn" id="retryBtn" style="margin-left:0.5rem;">Retry this chapter</button>
     </div>`;
 
