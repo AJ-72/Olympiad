@@ -1,6 +1,5 @@
-// Reads data/questions.json, checks it, and writes:
-//   - google-form.gs  (Apps Script that makes one Google Form per chapter)
-//   - index.html      (the quiz page; data goes between the BEGIN/END DATA markers)
+// Reads data/questions.json, checks it, and writes google-form.gs
+// (Apps Script that makes one Google Form per chapter). The web pages read the JSON directly.
 // Run: node build.js
 const fs = require("fs");
 
@@ -30,12 +29,6 @@ const json = JSON.stringify(data, null, 2);
 
 const gs = fs.readFileSync("google-form.template.gs", "utf8").replace("/*DATA*/", json);
 fs.writeFileSync("google-form.gs", gs);
-
-const html = fs.readFileSync("index.html", "utf8").replace(
-  /(\/\/ BEGIN DATA)[\s\S]*?(\/\/ END DATA)/,
-  `$1\nconst DATA = ${json};\n$2`
-);
-fs.writeFileSync("index.html", html);
 
 const total = data.chapters.reduce((n, c) => n + c.questions.length, 0);
 console.log(`OK: ${data.chapters.length} chapters, ${total} questions.`);

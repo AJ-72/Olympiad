@@ -1,36 +1,28 @@
 # Olympiad
 
-Olympiad book questions as a quiz page and as Google Forms (one form per chapter).
+Olympiad book questions as a web quiz, published with GitHub Pages.
 
-## How it works
+- **Quiz page** (`index.html`): children pick a chapter and answer; each answer is marked at once.
+- **Add chapter page** (`admin.html`): select book photos, the browser reads them with
+  Tesseract.js, you correct the questions and choose answers, then save to GitHub.
+- **Data** (`data/questions.json`): the only place questions live. Saving from the add
+  chapter page commits this file; the site republishes in about a minute.
 
-- `data/questions.json` — the only place questions live. One entry per chapter.
-- `node build.js` — checks the data, then writes `index.html` (quiz page) and `google-form.gs`.
-- `google-form.gs` — paste into https://script.google.com and run `createForms()`.
-  Only new chapters get a form; links collect in the "Olympiad forms" Google Sheet.
-  To redo a corrected chapter: `resetChapter("Class 3", 1)`, then `createForms()`.
+## One-time setup
 
-## Adding chapters
+1. Make the repository public (Settings → General → Danger Zone → Change visibility).
+2. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
+3. Merge to `main`. The workflow `.github/workflows/pages.yml` publishes the site to
+   `https://aj-72.github.io/Olympiad/`.
+4. Make a fine-grained token (GitHub → Settings → Developer settings → Personal access tokens →
+   Fine-grained): repository access **only AJ-72/Olympiad**, permission **Contents: Read and write**.
+   Paste it in "GitHub settings" on the add chapter page. It stays in that browser only.
 
-Send photos of the book pages. Each photo's questions go into `data/questions.json`,
-then run `node build.js`. Do not edit `google-form.gs` or the data in `index.html` by hand.
+## Other tools
 
-## Reading photos with Tesseract (Windows)
+- `node build.js` checks `data/questions.json` and writes `google-form.gs`
+  (Apps Script: one Google Form per chapter; run `createForms()` at https://script.google.com).
+- `tools/ocr_questions.py` is the command-line OCR version (Python + Tesseract).
 
-One-time setup:
-1. Install Python 3 from https://www.python.org (tick "Add python.exe to PATH").
-2. Install Tesseract from https://github.com/UB-Mannheim/tesseract/wiki (default folder).
-3. Install Node.js from https://nodejs.org (needed for `node build.js`).
-4. In the project folder: `pip install -r tools\requirements.txt`
-
-For each chapter:
-```
-python tools\ocr_questions.py --class "Class 3" --chapter 2 --title "Chapter title" ^
-    --pages photos\ch2_p1.jpg photos\ch2_p2.jpg --answers photos\answers.jpg
-```
-Add `--dry-run` to see the result without saving. Read the WARNING lines, fix those
-questions in `data/questions.json` (picture options, OCR spelling errors, missing answers),
-then run `node build.js`. Raw OCR text for each photo is in `ocr_output\`.
-
-Photo tips: take each page flat, straight from above, in good light, at full camera
-resolution. Small or angled photos give poor results.
+Photo tips: take each page flat, from above, in good light, at full camera resolution.
+Crop the answer photo to one chapter. OCR cannot read picture options; type those in.
