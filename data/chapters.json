@@ -4,6 +4,12 @@
     { "id": 2, "title": "Plants and Animals", "file": "ch2.json" },
     { "id": 3, "title": "India and the World", "file": "ch3.json" },
     { "id": 4, "title": "Science and Technology", "file": "ch4.json" },
-    { "id": 5, "title": "Language and Literature", "file": "ch5.json" }
+    { "id": 5, "title": "Language and Literature", "file": "ch5.json" },
+    { "id": 6, "title": "Earth and Its Environment", "file": "ch6.json" },
+    { "id": 7, "title": "Transport and Communication", "file": "ch7.json" },
+    { "id": 8, "title": "Sports", "file": "ch8.json" },
+    { "id": 9, "title": "Maths Fun", "file": "ch9.json" },
+    { "id": 10, "title": "Life Skills", "file": "ch10.json" },
+    { "id": 11, "title": "Current Affairs and Developments", "file": "ch11.json" }
   ]
 }
